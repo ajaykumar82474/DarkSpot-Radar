@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { AnalysisResult, Source } from "@/types";
 import { getScholarshipDemoAnalysis } from "@/data/scholarship-pack";
 import { DarkSpotMap } from "@/components/DarkSpotMap";
@@ -180,24 +181,29 @@ export default function HomePage() {
       {/* Top Header */}
       <header className="border-b border-radar-800 bg-radar-950/80 backdrop-blur-md sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-radar-900 border border-radar-700/80 flex items-center justify-center text-sky-400 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
+          <Link
+            href="/"
+            onClick={(e) => {
+              if (analysisResult) {
+                e.preventDefault();
+                handleReset();
+              }
+            }}
+            className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 rounded-xl p-1 -m-1 transition-colors"
+            aria-label="DarkSpot Radar Home"
+          >
+            <div className="w-9 h-9 rounded-xl bg-radar-900 border border-radar-700/80 flex items-center justify-center text-sky-400 shadow-[0_0_15px_rgba(56,189,248,0.2)] group-hover:border-sky-500/50 transition-colors">
               <Radar className="w-5 h-5 animate-pulse" aria-hidden="true" />
             </div>
             <div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold text-slate-100 tracking-tight text-base sm:text-lg">
-                  DarkSpot Radar
-                </span>
-                <span className="hidden sm:inline-block px-2 py-0.5 rounded text-[10px] font-mono bg-sky-950 text-sky-300 border border-sky-500/30">
-                  Shinchan Hackathon 2026
-                </span>
-              </div>
+              <span className="font-bold text-slate-100 tracking-tight text-base sm:text-lg block group-hover:text-sky-300 transition-colors">
+                DarkSpot Radar
+              </span>
               <p className="text-[11px] text-slate-400 hidden sm:block">
                 Digital Dark Spot: AI-Assisted Information Gap Detection
               </p>
             </div>
-          </div>
+          </Link>
 
           <div className="flex items-center gap-2.5">
             <button
@@ -574,7 +580,7 @@ export default function HomePage() {
             <span>— AI-Assisted Information Gap Detection Platform</span>
           </div>
           <div className="flex items-center gap-4 text-[11px] text-slate-500 font-mono">
-            <span>Shinchan Online Hackathon 2026</span>
+            <span>AI Gap Detection Platform</span>
             <span>•</span>
             <span>WCAG 2.2 AA Compliant</span>
             <span>•</span>

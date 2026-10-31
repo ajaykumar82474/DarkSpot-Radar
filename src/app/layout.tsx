@@ -33,7 +33,14 @@ export const metadata: Metadata = {
     "Decision Readiness Score",
     "Fact Checking",
   ],
-  authors: [{ name: "Shinchan Online Hackathon 2026 Team" }],
+  authors: [{ name: "DarkSpot Radar Team" }],
+  openGraph: {
+    title: "DarkSpot Radar | Information Gap & Contradiction Detection",
+    description:
+      "See what your sources don't tell you. Expectation-first AI gap detection, cross-source conflict audits, quote-verified evidence, and explainable decision readiness scoring.",
+    siteName: "DarkSpot Radar",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
