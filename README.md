@@ -80,6 +80,10 @@ Priority = Severity (1-4) x Uncertainty (1-3) x Impact (1-3)
 ### 8. 1-Click Competition Demo Pack (100% Offline Ready)
 Includes a precomputed scholarship scenario featuring an official portal, an educational blog, and an archived AY 2023-24 PDF circular. Demonstrates the renewal dark spot, income contradiction, and stale cycle in under 2 seconds with **no API key required**.
 
+![Dark Spot Map](docs/map.png)
+![Evidence Drawer](docs/drawer.png)
+![Verify-Next Checklist](docs/checklist.png)
+
 > **SAMPLE DATA:** All sources, scheme details and figures in the demo pack are fictional and created for demonstration only. They do not represent any real scholarship's actual rules.
 
 ---
